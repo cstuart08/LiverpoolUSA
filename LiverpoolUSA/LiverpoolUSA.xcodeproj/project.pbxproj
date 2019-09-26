@@ -45,6 +45,8 @@
 		D4DC6CCF2332C9EF00A72669 /* TeamLogoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DC6CCE2332C9EF00A72669 /* TeamLogoManager.swift */; };
 		D4DC6D022334169500A72669 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DC6D012334169500A72669 /* Event.swift */; };
 		D4DC6D0423342AB600A72669 /* SearchableRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DC6D0323342AB600A72669 /* SearchableRecord.swift */; };
+		D4FDF661233D5FA40054BB10 /* APIKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4FDF660233D5FA40054BB10 /* APIKeys.plist */; };
+		D4FDF663233D60A30054BB10 /* APIKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FDF662233D60A30054BB10 /* APIKeyManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +91,8 @@
 		D4DC6CCE2332C9EF00A72669 /* TeamLogoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamLogoManager.swift; sourceTree = "<group>"; };
 		D4DC6D012334169500A72669 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		D4DC6D0323342AB600A72669 /* SearchableRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableRecord.swift; sourceTree = "<group>"; };
+		D4FDF660233D5FA40054BB10 /* APIKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKeys.plist; sourceTree = "<group>"; };
+		D4FDF662233D60A30054BB10 /* APIKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeyManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +236,8 @@
 				D488080F23326FE1003C22A9 /* Colors.xcassets */,
 				D4B8BDB1232BD1D4006FB110 /* LaunchScreen.storyboard */,
 				D4B8BDB4232BD1D4006FB110 /* Info.plist */,
+				D4FDF660233D5FA40054BB10 /* APIKeys.plist */,
+				D4FDF662233D60A30054BB10 /* APIKeyManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -412,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4B8BDB3232BD1D4006FB110 /* LaunchScreen.storyboard in Resources */,
+				D4FDF661233D5FA40054BB10 /* APIKeys.plist in Resources */,
 				D488081023326FE1003C22A9 /* Colors.xcassets in Resources */,
 				D4B8BDB0232BD1D4006FB110 /* Assets.xcassets in Resources */,
 				D4B8BDAE232BD1D3006FB110 /* Main.storyboard in Resources */,
@@ -447,6 +454,7 @@
 				D4B8BDD7233038A0006FB110 /* FixturesViewController.swift in Sources */,
 				D4DC6CCA2332C0E400A72669 /* PastFixturesController.swift in Sources */,
 				D44D80F123371B1100BD90AE /* LiveFixture.swift in Sources */,
+				D4FDF663233D60A30054BB10 /* APIKeyManager.swift in Sources */,
 				D4B8BDA9232BD1D3006FB110 /* AppDelegate.swift in Sources */,
 				D4B8BDD923303F5D006FB110 /* FixtureTableViewCell.swift in Sources */,
 				D44D80EF2336B59900BD90AE /* PlacesSearchViewController.swift in Sources */,

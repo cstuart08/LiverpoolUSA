@@ -15,8 +15,8 @@ class LiveFixtureController {
         guard let baseURL = URL(string: "https://livescore-api.com/api-client/scores/live.json?") else { completion(nil); return }
         
         var components = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
-        let urlQueryItemkey = URLQueryItem(name: "key", value: "RVo5izZrngSvfH47")
-        let urlQueryItemSecret = URLQueryItem(name: "secret", value: "WK8tYZSGtLU2aPj1LH74h6vFnoaC6fK2")
+        let urlQueryItemkey = URLQueryItem(name: "key", value: APIKeyManager.retrieveAPIKey(name: "LiveScoreKey"))
+        let urlQueryItemSecret = URLQueryItem(name: "secret", value: APIKeyManager.retrieveAPIKey(name: "LiveScoreSecret"))
         components?.queryItems = [urlQueryItemkey, urlQueryItemSecret]
         
         guard let finalURL = components?.url else { completion(nil); return }

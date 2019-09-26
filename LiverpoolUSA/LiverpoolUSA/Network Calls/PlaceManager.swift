@@ -15,7 +15,7 @@ class PlaceManager {
         guard let baseURL = URL(string: "https://maps.googleapis.com/maps/api/place/textsearch/json?") else { completion([]); return }
         
         var components = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
-        let urlQueryItemkey = URLQueryItem(name: "key", value: "AIzaSyBGxowi_L8uc0dX3i3ipxzAV9GYlR1Jjzo")
+        let urlQueryItemkey = URLQueryItem(name: "key", value: APIKeyManager.retrieveAPIKey(name: "GooglePlacesKey"))
         let urlQueryItemType = URLQueryItem(name: "inputtype", value: "textquery")
         let urlQueryItemInput = URLQueryItem(name: "input", value: searchTerm)
         components?.queryItems = [urlQueryItemkey, urlQueryItemType, urlQueryItemInput]
