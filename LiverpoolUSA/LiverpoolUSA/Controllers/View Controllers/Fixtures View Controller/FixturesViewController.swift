@@ -17,7 +17,7 @@ class FixturesViewController: UIViewController {
     var fixtures: [Fixture] = []
     var pastFixtures: [PastFixture] = []
     var liveFixture: LiveFixture?
-    var noGameData: LiveFixture = LiveFixture(time: "noMatch", homeTeamName: "noMatch", awayTeamName: "noMatch", location: "noMatch", league: "noMatch", score: "0 - 0")
+    var noGameData: LiveFixture = LiveFixture(time: "noMatch", homeTeamName: "noMatch", awayTeamName: "noMatch", location: "noMatch", league: 0, score: "0 - 0")
     var apiCallCount: Int = 0
     
     // MARK: - Lifecycles
