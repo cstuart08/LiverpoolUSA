@@ -72,7 +72,7 @@ class FixtureTableViewCell: UITableViewCell {
                     self.awayTeamLabel.text = fixture.awayTeamName
                 }
                 
-                self.competitionLabel.text = LeagueGenerator.leagueNameGenerator(id: fixture.league)
+                self.competitionLabel.text = LeagueGenerator.leagueNameGenerator(id: fixture.league, intID: nil)
                 self.competitionLabel.layer.cornerRadius = 8
                 self.competitionLabel.layer.masksToBounds = true
                 if self.competitionLabel.text == LeagueNameConstants.premierLeague {
@@ -125,7 +125,7 @@ class FixtureTableViewCell: UITableViewCell {
                     self.awayScoreLabel.text = scores[1]
                     self.homeTeamLabel.text = liveFixture.homeTeamName
                     self.awayTeamLabel.text = liveFixture.awayTeamName
-                    self.competitionLabel.text = LeagueGenerator.leagueNameGenerator(id: liveFixture.league)
+                    self.competitionLabel.text = LeagueGenerator.leagueNameGenerator(id: nil, intID: liveFixture.league)
                     self.competitionLabel.layer.cornerRadius = 8
                     self.competitionLabel.layer.masksToBounds = true
                     if self.competitionLabel.text == LeagueNameConstants.premierLeague {
@@ -171,7 +171,7 @@ class FixtureTableViewCell: UITableViewCell {
                 self.awayScoreLabel.text = scores[1]
                 self.homeTeamLabel.text = pastFixture.homeTeamName
                 self.awayTeamLabel.text = pastFixture.awayTeamName
-                self.competitionLabel.text = LeagueGenerator.leagueNameGenerator(id: pastFixture.league)
+                self.competitionLabel.text = LeagueGenerator.leagueNameGenerator(id: pastFixture.league, intID: nil)
                 self.competitionLabel.layer.cornerRadius = 8
                 self.competitionLabel.layer.masksToBounds = true
                 if self.competitionLabel.text == LeagueNameConstants.premierLeague {

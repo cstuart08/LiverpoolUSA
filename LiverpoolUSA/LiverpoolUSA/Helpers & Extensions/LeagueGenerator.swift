@@ -17,10 +17,12 @@ struct LeagueNameConstants {
 
 struct LeagueGenerator {
     
-    static func leagueNameGenerator(id: String) -> String{
+    static func leagueNameGenerator(id: String?, intID: Int?) -> String{
         
         switch id {
         case _ where id == "25":
+            return LeagueNameConstants.premierLeague
+        case _ where intID == 25:
             return LeagueNameConstants.premierLeague
         case _ where id == "117":
             return LeagueNameConstants.eflCup
@@ -29,7 +31,7 @@ struct LeagueGenerator {
         case _ where id == "812":
             return LeagueNameConstants.uefaSuperCup
         default:
-            return id
+            return "NO KNOWN ID"
         }
     }
 }
