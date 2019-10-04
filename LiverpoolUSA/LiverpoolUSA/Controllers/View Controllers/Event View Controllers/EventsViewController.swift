@@ -17,7 +17,6 @@ class EventsViewController: UIViewController {
     // MARRK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .liverpoolRed
         eventsTableView.delegate = self
         eventsTableView.dataSource = self
         eventsTableView.tableFooterView = UIView()

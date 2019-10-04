@@ -23,7 +23,6 @@ class FixturesViewController: UIViewController {
     // MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        //view.backgroundColor = .liverpoolRed
         fixturesTableView.delegate = self
         fixturesTableView.dataSource = self
         fixturesTableView.isHidden = true
@@ -36,8 +35,6 @@ class FixturesViewController: UIViewController {
         tabBarController?.tabBar.barTintColor = UIColor.liverpoolRed
         tabBarController?.tabBar.tintColor = UIColor.white
         tabBarController?.tabBar.unselectedItemTintColor = UIColor.tabBarUnselectedColor
-        navigationController?.isNavigationBarHidden = true
-        tabBarController?.tabBar.isHidden = true
         getAllFixtures()
     }
     
@@ -45,13 +42,11 @@ class FixturesViewController: UIViewController {
         FixturesController.shared.getFixtures { (success) in
             print("Received upcoming fixtures.")
             if success {
-                self.fixturesTableView.isHidden = false
-                self.fixtures = FixturesController.shared.placeholder
-                print("WE did it")
+                    self.fixtures = FixturesController.shared.placeholder
+                    print("WE did it")
             } else {
                 DispatchQueue.main.async {
                     let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "noNetworkSB") as! NoNetworkViewController
-//                    viewController.view.backgroundColor = UIColor.white.withAlphaComponent(1)
                     viewController.modalPresentationStyle = .overFullScreen
                     self.definesPresentationContext = true
                     self.present(viewController, animated: true)
@@ -71,6 +66,7 @@ class FixturesViewController: UIViewController {
                     DispatchQueue.main.async {
                         self.navigationController?.isNavigationBarHidden = false
                         self.tabBarController?.tabBar.isHidden = false
+                        self.fixturesTableView.isHidden = false
                         self.fixturesTableView.reloadData()
                         let indexPath = NSIndexPath(row: 0, section: 1)
                         if self.apiCallCount == 0 {
