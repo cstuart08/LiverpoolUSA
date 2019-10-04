@@ -8,6 +8,7 @@
 
 import UIKit
 import SafariServices
+import Network
 
 class StandingsViewController: UIViewController {
     
@@ -22,6 +23,7 @@ class StandingsViewController: UIViewController {
     var maxTime: Float = 10.0
     var apiCallCount: Int = 0
     var isDarkMode: Bool = false
+    let monitor = NWPathMonitor()
     
     // MARK: - Lifecycles
     override func viewDidLoad() {
@@ -46,16 +48,7 @@ class StandingsViewController: UIViewController {
         }
         fetchStandings()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        view.backgroundColor = .liverpoolRed
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        showLoadingScreen()
-    }
-    
+
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         standingsTableView.reloadData()
@@ -66,14 +59,23 @@ class StandingsViewController: UIViewController {
         StandingsController.fetchStandings { (standings) in
             self.standings = standings
             DispatchQueue.main.async {
-                self.apiCallCount = self.apiCallCount + 1
-                let notification = Notification(name: Notification.Name(rawValue: "dismissLoadingView"))
-                NotificationCenter.default.post(notification)
-                self.navigationController?.isNavigationBarHidden = false
-                self.tabBarController?.tabBar.isHidden = false
-                self.headerView.isHidden = false
-                self.standingsTableView.isHidden = false
-                self.standingsTableView.reloadData()
+                if self.standings.count == 0 {
+                    let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "noNetworkSB") as! NoNetworkViewController
+                    viewController.view.backgroundColor = UIColor.white.withAlphaComponent(0)
+                    viewController.modalPresentationStyle = .overFullScreen
+                    self.definesPresentationContext = true
+                    self.present(viewController, animated: true)
+                    self.navigationController?.isNavigationBarHidden = false
+                    self.tabBarController?.tabBar.isHidden = false
+                    self.headerView.isHidden = false
+                } else {
+                    self.apiCallCount = self.apiCallCount + 1
+                    self.navigationController?.isNavigationBarHidden = false
+                    self.tabBarController?.tabBar.isHidden = false
+                    self.headerView.isHidden = false
+                    self.standingsTableView.isHidden = false
+                    self.standingsTableView.reloadData()
+                }
             }
         }
     }
@@ -87,19 +89,9 @@ class StandingsViewController: UIViewController {
         UIView.commitAnimations()
     }
     
-    func showLoadingScreen() {
-        if apiCallCount == 0 {
-            let loadingViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loadingVC")
-            loadingViewController.modalPresentationStyle = .overCurrentContext
-            present(loadingViewController, animated: true, completion: nil)
-        } else {
-            return
-        }
-    }
-    
     //MARK: - Actions
     @IBAction func privacyPolicyButtonTapped(_ sender: Any) {
-        guard let url = URL(string: "https://cameronstuart.com/liverpoolusa-support") else { return }
+        guard let url = URL(string: "https://cameronstuart.com/redsusa-support") else { return }
         let svc = SFSafariViewController(url: url)
         present(svc, animated: true)
     }

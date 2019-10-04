@@ -105,6 +105,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" estimatedRowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yZQ-ev-41d" userLabel="Standings Header View">
                                 <rect key="frame" x="0.0" y="82" width="414" height="605"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="standingCell" rowHeight="60" id="nKU-0T-VyK" customClass="TeamStandingTableViewCell" customModule="LiverpoolUSA" customModuleProvider="target">
@@ -236,7 +237,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" name="liverpoolRed"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" name="liverpoolRed"/>
                         <constraints>
                             <constraint firstItem="yZQ-ev-41d" firstAttribute="trailing" secondItem="eN0-GC-XbW" secondAttribute="trailing" id="6BS-VU-WaX"/>
@@ -776,7 +777,7 @@
                                 <color key="separatorColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="sectionIndexTrackingBackgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="placesSearchResultsCell" textLabel="NTF-p3-eFy" detailTextLabel="P9e-ic-463" style="IBUITableViewCellStyleValue1" id="8vx-48-mb6">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
@@ -942,7 +943,7 @@
                                                 <rect key="frame" x="0.0" y="65.666666666666657" width="393.33333333333331" height="31"/>
                                                 <fontDescription key="fontDescription" name="PingFangHK-Light" family="PingFang HK" pointSize="16"/>
                                                 <state key="normal" title="(location address)">
-                                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="locationAddressButtonTapped:" destination="YeE-cV-F2g" eventType="touchUpInside" id="hNW-mz-bMJ"/>
@@ -1139,6 +1140,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QRG-9b-V8l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1913" y="-48"/>
+        </scene>
+        <!--No Network View Controller-->
+        <scene sceneID="5mX-Dp-QpW">
+            <objects>
+                <viewController storyboardIdentifier="noNetworkSB" id="207-8c-Fwu" customClass="NoNetworkViewController" customModule="LiverpoolUSA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="umf-4T-ENf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.65000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H27-oh-mBq">
+                                <rect key="frame" x="72.333333333333343" y="288" width="269.33333333333326" height="160"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uh oh! It looks like you don't have any internet connection! This data requires internet connection to load." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9A-x8-xSr">
+                                        <rect key="frame" x="13.666666666666686" y="8" width="242" height="95.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4d-sb-9Vs">
+                                        <rect key="frame" x="0.0" y="115.33333333333331" width="269.33333333333331" height="36"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="17"/>
+                                        <state key="normal" title="OKAY">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="okayButtonTapped:" destination="207-8c-Fwu" eventType="touchUpInside" id="yTj-IL-ntK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="e9A-x8-xSr" firstAttribute="centerX" secondItem="H27-oh-mBq" secondAttribute="centerX" id="8hN-3p-WTN"/>
+                                    <constraint firstAttribute="height" constant="160" id="K8t-qs-UlO"/>
+                                    <constraint firstItem="d4d-sb-9Vs" firstAttribute="centerX" secondItem="H27-oh-mBq" secondAttribute="centerX" id="TOw-Od-91a"/>
+                                    <constraint firstItem="d4d-sb-9Vs" firstAttribute="width" secondItem="H27-oh-mBq" secondAttribute="width" id="bgd-cc-pOj"/>
+                                    <constraint firstItem="e9A-x8-xSr" firstAttribute="width" secondItem="H27-oh-mBq" secondAttribute="width" multiplier="0.9" id="kOK-vf-u1c"/>
+                                    <constraint firstItem="d4d-sb-9Vs" firstAttribute="top" secondItem="e9A-x8-xSr" secondAttribute="bottom" constant="12" id="y9D-ZC-CIw"/>
+                                    <constraint firstItem="e9A-x8-xSr" firstAttribute="top" secondItem="H27-oh-mBq" secondAttribute="top" constant="8" id="zrg-o7-wGP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="H27-oh-mBq" firstAttribute="width" secondItem="hVr-Iz-89A" secondAttribute="width" multiplier="0.65" id="eXr-zq-1hr"/>
+                            <constraint firstItem="H27-oh-mBq" firstAttribute="centerX" secondItem="hVr-Iz-89A" secondAttribute="centerX" id="hTw-If-6wm"/>
+                            <constraint firstItem="H27-oh-mBq" firstAttribute="centerY" secondItem="hVr-Iz-89A" secondAttribute="centerY" id="yld-s0-nBL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hVr-Iz-89A"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="szI-k0-Azg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3061" y="-48"/>
         </scene>
         <!--Fixtures-->
         <scene sceneID="vJT-sF-KUr">

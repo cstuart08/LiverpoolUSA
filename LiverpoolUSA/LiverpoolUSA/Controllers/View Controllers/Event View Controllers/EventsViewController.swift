@@ -17,9 +17,11 @@ class EventsViewController: UIViewController {
     // MARRK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .liverpoolRed
         eventsTableView.delegate = self
         eventsTableView.dataSource = self
         eventsTableView.tableFooterView = UIView()
+        eventsTableView.isHidden = true
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -34,6 +36,13 @@ class EventsViewController: UIViewController {
                 print("Blacklist retreived.")
             } else {
                 print("No Blacklist found.")
+                DispatchQueue.main.async {
+                    let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "noNetworkSB") as! NoNetworkViewController
+                    viewController.view.backgroundColor = UIColor.white.withAlphaComponent(0)
+                    viewController.modalPresentationStyle = .overFullScreen
+                    self.definesPresentationContext = true
+                    self.present(viewController, animated: true)
+                }
             }
         }
         NotificationCenter.default.addObserver(self, selector: #selector(reloadViews), name: EventController.shared.eventsWereUpdatedNotification, object: nil)
@@ -47,6 +56,7 @@ class EventsViewController: UIViewController {
             DispatchQueue.main.async {
                 print("Reloading events tableview data")
                 self.eventsTableView.reloadData()
+                self.eventsTableView.isHidden = false
             }
         }
     }
