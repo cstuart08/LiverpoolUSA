@@ -23,6 +23,7 @@ class FixturesViewController: UIViewController {
     // MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        //view.backgroundColor = .liverpoolRed
         fixturesTableView.delegate = self
         fixturesTableView.dataSource = self
         fixturesTableView.isHidden = true
@@ -37,35 +38,24 @@ class FixturesViewController: UIViewController {
         tabBarController?.tabBar.unselectedItemTintColor = UIColor.tabBarUnselectedColor
         navigationController?.isNavigationBarHidden = true
         tabBarController?.tabBar.isHidden = true
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        view.backgroundColor = .liverpoolRed
         getAllFixtures()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        showLoadingScreen()
-    }
-    
-    // MARK: - Methods
-    func showLoadingScreen() {
-        if apiCallCount == 0 {
-            let loadingViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loadingVC")
-            loadingViewController.modalPresentationStyle = .overCurrentContext
-            present(loadingViewController, animated: true, completion: nil)
-        } else {
-            return
-        }
     }
     
     func getAllFixtures() {
         FixturesController.shared.getFixtures { (success) in
             print("Received upcoming fixtures.")
             if success {
+                self.fixturesTableView.isHidden = false
                 self.fixtures = FixturesController.shared.placeholder
                 print("WE did it")
+            } else {
+                DispatchQueue.main.async {
+                    let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "noNetworkSB") as! NoNetworkViewController
+//                    viewController.view.backgroundColor = UIColor.white.withAlphaComponent(1)
+                    viewController.modalPresentationStyle = .overFullScreen
+                    self.definesPresentationContext = true
+                    self.present(viewController, animated: true)
+                }
             }
             LiveFixtureController.getLiveFixtures { (liveFixture) in
                 if let liveLiverpoolFixture = liveFixture {
@@ -79,11 +69,8 @@ class FixturesViewController: UIViewController {
                     print("Recieved past fixtures.")
                     self.pastFixtures = pastFixtures
                     DispatchQueue.main.async {
-                        self.fixturesTableView.isHidden = false
                         self.navigationController?.isNavigationBarHidden = false
                         self.tabBarController?.tabBar.isHidden = false
-                        let notification = Notification(name: Notification.Name(rawValue: "dismissLoadingView"))
-                        NotificationCenter.default.post(notification)
                         self.fixturesTableView.reloadData()
                         let indexPath = NSIndexPath(row: 0, section: 1)
                         if self.apiCallCount == 0 {

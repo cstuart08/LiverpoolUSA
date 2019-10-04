@@ -45,6 +45,7 @@
 		D4DC6CCF2332C9EF00A72669 /* TeamLogoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DC6CCE2332C9EF00A72669 /* TeamLogoManager.swift */; };
 		D4DC6D022334169500A72669 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DC6D012334169500A72669 /* Event.swift */; };
 		D4DC6D0423342AB600A72669 /* SearchableRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DC6D0323342AB600A72669 /* SearchableRecord.swift */; };
+		D4E1D9F923463BAD00F1CFA5 /* NoNetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1D9F823463BAD00F1CFA5 /* NoNetworkViewController.swift */; };
 		D4FDF661233D5FA40054BB10 /* APIKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4FDF660233D5FA40054BB10 /* APIKeys.plist */; };
 		D4FDF663233D60A30054BB10 /* APIKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FDF662233D60A30054BB10 /* APIKeyManager.swift */; };
 /* End PBXBuildFile section */
@@ -91,6 +92,7 @@
 		D4DC6CCE2332C9EF00A72669 /* TeamLogoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamLogoManager.swift; sourceTree = "<group>"; };
 		D4DC6D012334169500A72669 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		D4DC6D0323342AB600A72669 /* SearchableRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableRecord.swift; sourceTree = "<group>"; };
+		D4E1D9F823463BAD00F1CFA5 /* NoNetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoNetworkViewController.swift; sourceTree = "<group>"; };
 		D4FDF660233D5FA40054BB10 /* APIKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = APIKeys.plist; sourceTree = "<group>"; };
 		D4FDF662233D60A30054BB10 /* APIKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeyManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +150,7 @@
 				D41C876323363D1300B3373D /* DatePickerViewController.swift */,
 				D44D80EE2336B59900BD90AE /* PlacesSearchViewController.swift */,
 				D4166436233A78C200598F82 /* EventDescriptionViewController.swift */,
+				D4E1D9F823463BAD00F1CFA5 /* NoNetworkViewController.swift */,
 			);
 			path = "Assistant View Controllers";
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				D41C8756233529AB00B3373D /* EventsController.swift in Sources */,
 				D4B8BDC7232BD3B2006FB110 /* TeamStanding.swift in Sources */,
 				D4D56FE723343F0500CA2117 /* PlaceManager.swift in Sources */,
+				D4E1D9F923463BAD00F1CFA5 /* NoNetworkViewController.swift in Sources */,
 				D416643B233AC49D00598F82 /* UserBlacklist.swift in Sources */,
 				D4DC6D0423342AB600A72669 /* SearchableRecord.swift in Sources */,
 			);
