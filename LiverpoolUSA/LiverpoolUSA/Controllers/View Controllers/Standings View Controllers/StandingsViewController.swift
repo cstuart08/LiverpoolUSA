@@ -15,22 +15,26 @@ class StandingsViewController: UIViewController {
     //MARK: - Outlets
     @IBOutlet weak var standingsTableView: UITableView!
     @IBOutlet weak var headerView: UIView!
-    @IBOutlet weak var refreshButton: UIBarButtonItem!
     
     //MARK: - Properties
     var standings: [TeamStanding] = []
     var currentTime: Float = 0.0
     var maxTime: Float = 10.0
     var apiCallCount: Int = 0
-    var isDarkMode: Bool = false
     let monitor = NWPathMonitor()
+    let button1: UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 60))
+    var refreshing = false
     
     // MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        button1.setTitle("", for: .normal)
+        button1.setImage(UIImage(systemName:    "arrow.clockwise"), for: .normal)
+        button1.addTarget(self, action: #selector(refreshButtonTapped), for: .touchUpInside)
+        let barItem1: UIBarButtonItem = UIBarButtonItem(customView: button1)
+        navigationItem.setLeftBarButton(barItem1, animated: true)
         standingsTableView.delegate = self
         standingsTableView.dataSource = self
-        standingsTableView.isHidden = true
         navigationController?.navigationBar.isTranslucent = false
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
@@ -40,13 +44,15 @@ class StandingsViewController: UIViewController {
         tabBarController?.tabBar.barTintColor = UIColor.liverpoolRed
         tabBarController?.tabBar.tintColor = UIColor.white
         tabBarController?.tabBar.unselectedItemTintColor = UIColor.tabBarUnselectedColor
-        navigationController?.isNavigationBarHidden = true
-        tabBarController?.tabBar.isHidden = true
-        headerView.isHidden = true
-        if self.traitCollection.userInterfaceStyle == .dark {
-            isDarkMode = true
+        self.standings = StandingsController.shared.standings
+        if self.standings.count == 0 {
+            self.rotateBarButton()
+            self.standingsTableView.isHidden = true
+            navigationController?.isNavigationBarHidden = true
+            tabBarController?.tabBar.isHidden = true
+            self.headerView.isHidden = true
+            self.fetchStandings()
         }
-        fetchStandings()
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -56,7 +62,8 @@ class StandingsViewController: UIViewController {
     
     // MARK: - Methods
     func fetchStandings() {
-        StandingsController.fetchStandings { (standings) in
+        self.refreshing = true
+        StandingsController.shared.fetchStandings { (standings) in
             self.standings = standings
             DispatchQueue.main.async {
                 if self.standings.count == 0 {
@@ -68,6 +75,7 @@ class StandingsViewController: UIViewController {
                     self.navigationController?.isNavigationBarHidden = false
                     self.tabBarController?.tabBar.isHidden = false
                     self.headerView.isHidden = false
+                    self.refreshing = false
                 } else {
                     self.apiCallCount = self.apiCallCount + 1
                     self.navigationController?.isNavigationBarHidden = false
@@ -75,18 +83,29 @@ class StandingsViewController: UIViewController {
                     self.headerView.isHidden = false
                     self.standingsTableView.isHidden = false
                     self.standingsTableView.reloadData()
+                    self.refreshing = false
                 }
             }
         }
     }
     
+    @objc func refreshButtonTapped() {
+        fetchStandings()
+        rotateBarButton()
+    }
+    
     func rotateBarButton() {
-        UIView.beginAnimations(nil, context: nil)
-        UIView.setAnimationDuration(0.5)
-        UIView.setAnimationCurve(.easeIn)
-        let radians = CGFloat(180 * Double.pi / 180)
-        refreshButton.customView?.transform = CGAffineTransform(rotationAngle: radians)
-        UIView.commitAnimations()
+        UIView.animate(withDuration: 0.7) { () -> Void in
+          self.button1.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+        }
+
+        UIView.animate(withDuration: 0.7, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: { () -> Void in
+          self.button1.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 2.0)
+        }) { (_) in
+            if self.refreshing == true {
+                self.rotateBarButton()
+            }
+        }
     }
     
     //MARK: - Actions
@@ -94,12 +113,6 @@ class StandingsViewController: UIViewController {
         guard let url = URL(string: "https://cameronstuart.com/redsusa-support") else { return }
         let svc = SFSafariViewController(url: url)
         present(svc, animated: true)
-    }
-    
-    
-    @IBAction func refreshButtonTapped(_ sender: Any) {
-        fetchStandings()
-        rotateBarButton()
     }
 }
 
@@ -116,30 +129,15 @@ extension StandingsViewController: UITableViewDelegate, UITableViewDataSource {
         let standing = standings[indexPath.row]
         cell.content = standing
         
+        
         if standing.teamRank == "1" || standing.teamRank == "2" ||  standing.teamRank == "3" || standing.teamRank == "4" {
-            if self.traitCollection.userInterfaceStyle == .dark {
-                cell.backgroundColor = .clQualificationGreenDarkMode
-            } else {
-                cell.backgroundColor = .clQualificationGreen
-            }
+            cell.backgroundColor = .clQualificationGreen
         } else if standing.teamRank == "5" {
-            if self.traitCollection.userInterfaceStyle == .dark {
-                cell.backgroundColor = .championsLeagueBlue
-            } else {
-                cell.backgroundColor = .europaQualificationBlue
-            }
+            cell.backgroundColor = .europaQualificationBlue
         } else if standing.teamRank == "18" || standing.teamRank == "19" || standing.teamRank == "20" {
-            if self.traitCollection.userInterfaceStyle == .dark {
-                cell.backgroundColor = .relegationRedDarkMode
-            } else {
-                cell.backgroundColor = .relegationRed
-            }
+            cell.backgroundColor = .relegationRed
         } else {
-            if isDarkMode == true {
-                cell.backgroundColor = .black
-            } else {
-                cell.backgroundColor = .white
-            }
+            cell.backgroundColor = .liverpoolWhite
         }
         return cell
     }

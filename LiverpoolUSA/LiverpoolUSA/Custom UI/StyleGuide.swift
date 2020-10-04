@@ -13,6 +13,7 @@ extension UIColor {
     static let europaQualificationBlue = UIColor(named: "europaQualificationBlue")!
     static let relegationRed = UIColor(named: "relegationRed")!
     static let liverpoolRed = UIColor(named: "liverpoolRed")!
+    static let liverpoolWhite = UIColor(named: "liverpoolWhite")!
     static let superLightGray = UIColor(named: "superLightGray")!
     static let superDarkGray = UIColor(named: "superDarkGray")!
     static let tabBarUnselectedColor = UIColor(named: "tabBarUnselectedColor")!

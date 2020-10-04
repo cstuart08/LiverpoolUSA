@@ -12,7 +12,9 @@ struct LeagueNameConstants {
     static let premierLeague = "Premier League"
     static let championsLeague = "Champions League"
     static let uefaSuperCup = "UEFA Super Cup"
-    static let eflCup = "EFL Cup"
+    static let carabaoCup = "Carabao Cup"
+    static let communityShield = "Community Shield"
+    static let clubFriendly = "Club Friendy"
 }
 
 struct LeagueGenerator {
@@ -25,11 +27,19 @@ struct LeagueGenerator {
         case _ where intID == 25:
             return LeagueNameConstants.premierLeague
         case _ where id == "117":
-            return LeagueNameConstants.eflCup
+            return LeagueNameConstants.carabaoCup
+        case _ where intID == 0:
+            return LeagueNameConstants.carabaoCup
         case _ where id == "232":
             return LeagueNameConstants.championsLeague
         case _ where id == "812":
             return LeagueNameConstants.uefaSuperCup
+        case _ where id == "5" || intID == 5 :
+            return LeagueNameConstants.clubFriendly
+        case _ where intID == 731:
+            return LeagueNameConstants.communityShield
+        case _ where id == "0":
+            return LeagueNameConstants.clubFriendly
         default:
             return "NO KNOWN ID"
         }

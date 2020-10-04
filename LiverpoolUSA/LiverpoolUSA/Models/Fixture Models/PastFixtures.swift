@@ -15,7 +15,7 @@ struct PastFixture: Codable {
     let homeTeamName: String
     let awayTeamName: String
     let location: String?
-    let league: String
+    let league: Int
     let score: String
     
     enum CodingKeys: String, CodingKey {

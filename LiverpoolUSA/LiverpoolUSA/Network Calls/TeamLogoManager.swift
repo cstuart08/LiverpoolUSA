@@ -75,7 +75,7 @@ class TeamLogoManager {
     }
     
     var logoCache: [String : UIImage] = [
-        // 2019-2020 Premiere League Teams
+        // Premiere League Teams
         "Liverpool" : #imageLiteral(resourceName: "Liverpool"),
         "Tottenham Hotspur" : #imageLiteral(resourceName: "Tottenham Hotspur"),
         "Manchester City" : #imageLiteral(resourceName: "Manchester City"),
@@ -96,12 +96,23 @@ class TeamLogoManager {
         "Aston Villa" : #imageLiteral(resourceName: "Aston Villa"),
         "Wolverhampton Wanderers" : #imageLiteral(resourceName: "Wolverhampton Wanderers"),
         "Watford" : #imageLiteral(resourceName: "Watford"),
+        "Leeds United" : UIImage(named: "Leeds United")!,
+        "West Bromwich Albion" : UIImage(named: "West Bromwich Albion")!,
+        "Fulham" : UIImage(named: "Fulham")!,
         // 2019-2020 Other Opposing Teams
         "Milton Keynes Dons" : #imageLiteral(resourceName: "Milton Keynes Dons"),
         "Genk" : #imageLiteral(resourceName: "Genk"),
         "Salzburg" : #imageLiteral(resourceName: "Salzburg"),
         "SSC Napoli": #imageLiteral(resourceName: "SSC Napoli"),
         "Napoli": #imageLiteral(resourceName: "SSC Napoli"),
+        "Lincoln City" : UIImage(named: "Lincoln City")!,
+        "VfB Stuttgart" : UIImage(named: "VfB Stuttgart")!,
+        "Blackpool" : UIImage(named: "Blackpool")!,
+        "Midtjylland" : UIImage(named: "Midtjylland")!,
+        "Inter Milan" : UIImage(named: "Inter Milan")!,
+        "Ajax" : UIImage(named: "Ajax")!,
+        "Atalanta" : UIImage(named: "Atalanta")!,
+        "MGladbach" : UIImage(named: "MGladbach")!,
         // NO MATCH
         "noMatch": #imageLiteral(resourceName: "noImageAvailable")
     ]

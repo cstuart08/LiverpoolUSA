@@ -19,10 +19,17 @@ class FixturesViewController: UIViewController {
     var liveFixture: LiveFixture?
     var noGameData: LiveFixture = LiveFixture(time: "noMatch", homeTeamName: "noMatch", awayTeamName: "noMatch", location: "noMatch", league: 0, score: "0 - 0")
     var apiCallCount: Int = 0
+    let button1: UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 60))
+    var refreshing = false
     
     // MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        button1.setTitle("", for: .normal)
+        button1.setImage(UIImage(systemName:    "arrow.clockwise"), for: .normal)
+        button1.addTarget(self, action: #selector(refreshButtonTapped), for: .touchUpInside)
+        let barItem1: UIBarButtonItem = UIBarButtonItem(customView: button1)
+        navigationItem.setLeftBarButton(barItem1, animated: true)
         fixturesTableView.delegate = self
         fixturesTableView.dataSource = self
         fixturesTableView.isHidden = true
@@ -35,15 +42,17 @@ class FixturesViewController: UIViewController {
         tabBarController?.tabBar.barTintColor = UIColor.liverpoolRed
         tabBarController?.tabBar.tintColor = UIColor.white
         tabBarController?.tabBar.unselectedItemTintColor = UIColor.tabBarUnselectedColor
+        rotateBarButton()
         getAllFixtures()
     }
     
     func getAllFixtures() {
+        self.refreshing = true
         FixturesController.shared.getFixtures { (success) in
             print("Received upcoming fixtures.")
             if success {
-                    self.fixtures = FixturesController.shared.placeholder
-                    print("WE did it")
+                self.fixtures = FixturesController.shared.placeholder
+                print("WE did it")
             } else {
                 DispatchQueue.main.async {
                     let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "noNetworkSB") as! NoNetworkViewController
@@ -63,6 +72,7 @@ class FixturesViewController: UIViewController {
                 PastFixturesController.getPastFixtures { (pastFixtures) in
                     print("Recieved past fixtures.")
                     self.pastFixtures = pastFixtures
+                    self.refreshing = false
                     DispatchQueue.main.async {
                         self.navigationController?.isNavigationBarHidden = false
                         self.tabBarController?.tabBar.isHidden = false
@@ -79,9 +89,23 @@ class FixturesViewController: UIViewController {
         }
     }
     
-    //MARK: - Actions
-    @IBAction func refreshButtonTapped(_ sender: Any) {
+    @objc func refreshButtonTapped() {
         getAllFixtures()
+        rotateBarButton()
+    }
+    
+    func rotateBarButton() {
+        UIView.animate(withDuration: 0.7) { () -> Void in
+          self.button1.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+        }
+
+        UIView.animate(withDuration: 0.7, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: { () -> Void in
+          self.button1.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 2.0)
+        }) { (_) in
+            if self.refreshing == true {
+                self.rotateBarButton()
+            }
+        }
     }
 }
 
