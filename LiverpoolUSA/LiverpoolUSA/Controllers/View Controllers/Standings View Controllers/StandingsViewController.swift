@@ -28,6 +28,7 @@ class StandingsViewController: UIViewController {
     // MARK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        LocationManager.shared.getLocation()
         button1.setTitle("", for: .normal)
         button1.setImage(UIImage(systemName:    "arrow.clockwise"), for: .normal)
         button1.addTarget(self, action: #selector(refreshButtonTapped), for: .touchUpInside)

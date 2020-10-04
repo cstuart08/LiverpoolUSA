@@ -7,20 +7,28 @@
 //
 
 import Foundation
+import CoreLocation
 
 class PlaceManager {
     
     static func fetchPlaces(searchTerm: String, completion: @escaping ([Place]) -> Void) {
         
+        let locationCoordinates = LocationManager.shared.currentLocation ?? CLLocation(latitude: 0, longitude: 0)
+        
         guard let baseURL = URL(string: "https://maps.googleapis.com/maps/api/place/textsearch/json?") else { completion([]); return }
+        let location = "\(locationCoordinates.coordinate.latitude),\(locationCoordinates.coordinate.longitude)"
         
         var components = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
         let urlQueryItemkey = URLQueryItem(name: "key", value: APIKeyManager.retrieveAPIKey(name: "GooglePlacesKey"))
         let urlQueryItemType = URLQueryItem(name: "inputtype", value: "textquery")
         let urlQueryItemInput = URLQueryItem(name: "input", value: searchTerm)
-        components?.queryItems = [urlQueryItemkey, urlQueryItemType, urlQueryItemInput]
+        let locationQuery = URLQueryItem(name: "location", value: location)
+        let radiusQuery =  URLQueryItem(name: "radius", value: "10000")
+        components?.queryItems = [urlQueryItemkey, urlQueryItemType, urlQueryItemInput,locationQuery, radiusQuery]
         
         guard let finalURL = components?.url else { completion([]); return }
+        
+        print(finalURL)
         
         let request = URLRequest(url: finalURL)
         
