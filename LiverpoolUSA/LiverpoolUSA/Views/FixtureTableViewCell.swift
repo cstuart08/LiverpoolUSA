@@ -76,23 +76,11 @@ class FixtureTableViewCell: UITableViewCell {
                 self.competitionLabel.layer.cornerRadius = 8
                 self.competitionLabel.layer.masksToBounds = true
                 if self.competitionLabel.text == LeagueNameConstants.premierLeague {
-                    if self.traitCollection.userInterfaceStyle == .dark {
-                        self.competitionLabel.layer.backgroundColor = UIColor.clQualificationGreenDarkMode.cgColor
-                    } else {
-                        self.competitionLabel.layer.backgroundColor = UIColor.clQualificationGreen.cgColor
-                    }
+                    self.competitionLabel.layer.backgroundColor = UIColor.clQualificationGreen.cgColor
                 } else if self.competitionLabel.text == LeagueNameConstants.championsLeague {
-                    if self.traitCollection.userInterfaceStyle == .dark {
-                        self.competitionLabel.layer.backgroundColor = UIColor.championsLeagueBlue.cgColor
-                    } else {
-                        self.competitionLabel.layer.backgroundColor = UIColor.europaQualificationBlue.cgColor
-                    }
+                    self.competitionLabel.layer.backgroundColor = UIColor.europaQualificationBlue.cgColor
                 } else {
-                    if self.traitCollection.userInterfaceStyle == .dark {
-                        self.competitionLabel.layer.backgroundColor = UIColor.superDarkGray.cgColor
-                    } else {
-                        self.competitionLabel.layer.backgroundColor = UIColor.superLightGray.cgColor
-                    }
+                    self.competitionLabel.layer.backgroundColor = UIColor.superLightGray.cgColor
                 }
             }
         } else if let liveFixture = liveFixture {
@@ -129,23 +117,11 @@ class FixtureTableViewCell: UITableViewCell {
                     self.competitionLabel.layer.cornerRadius = 8
                     self.competitionLabel.layer.masksToBounds = true
                     if self.competitionLabel.text == LeagueNameConstants.premierLeague {
-                        if self.traitCollection.userInterfaceStyle == .dark {
-                            self.competitionLabel.layer.backgroundColor = UIColor.clQualificationGreenDarkMode.cgColor
-                        } else {
-                            self.competitionLabel.layer.backgroundColor = UIColor.clQualificationGreen.cgColor
-                        }
-                    } else if self.competitionLabel.text == LeagueNameConstants.championsLeague {
-                        if self.traitCollection.userInterfaceStyle == .dark {
-                            self.competitionLabel.layer.backgroundColor = UIColor.championsLeagueBlue.cgColor
-                        } else {
+                        if self.competitionLabel.text == LeagueNameConstants.championsLeague {
                             self.competitionLabel.layer.backgroundColor = UIColor.europaQualificationBlue.cgColor
                         }
                     } else {
-                        if self.traitCollection.userInterfaceStyle == .dark {
-                            self.competitionLabel.layer.backgroundColor = UIColor.superDarkGray.cgColor
-                        } else {
-                            self.competitionLabel.layer.backgroundColor = UIColor.superLightGray.cgColor
-                        }
+                        self.competitionLabel.layer.backgroundColor = UIColor.superLightGray.cgColor
                     }
                     self.colorScores()
                 }
@@ -171,27 +147,15 @@ class FixtureTableViewCell: UITableViewCell {
                 self.awayScoreLabel.text = scores[1]
                 self.homeTeamLabel.text = pastFixture.homeTeamName
                 self.awayTeamLabel.text = pastFixture.awayTeamName
-                self.competitionLabel.text = LeagueGenerator.leagueNameGenerator(id: pastFixture.league, intID: nil)
+                self.competitionLabel.text = LeagueGenerator.leagueNameGenerator(id: nil, intID: pastFixture.league)
                 self.competitionLabel.layer.cornerRadius = 8
                 self.competitionLabel.layer.masksToBounds = true
                 if self.competitionLabel.text == LeagueNameConstants.premierLeague {
-                    if self.traitCollection.userInterfaceStyle == .dark {
-                        self.competitionLabel.layer.backgroundColor = UIColor.clQualificationGreenDarkMode.cgColor
-                    } else {
-                        self.competitionLabel.layer.backgroundColor = UIColor.clQualificationGreen.cgColor
-                    }
+                    self.competitionLabel.layer.backgroundColor = UIColor.clQualificationGreen.cgColor
                 } else if self.competitionLabel.text == LeagueNameConstants.championsLeague {
-                    if self.traitCollection.userInterfaceStyle == .dark {
-                        self.competitionLabel.layer.backgroundColor = UIColor.championsLeagueBlue.cgColor
-                    } else {
-                        self.competitionLabel.layer.backgroundColor = UIColor.europaQualificationBlue.cgColor
-                    }
+                    self.competitionLabel.layer.backgroundColor = UIColor.europaQualificationBlue.cgColor
                 } else {
-                    if self.traitCollection.userInterfaceStyle == .dark {
-                        self.competitionLabel.layer.backgroundColor = UIColor.superDarkGray.cgColor
-                    } else {
-                        self.competitionLabel.layer.backgroundColor = UIColor.superLightGray.cgColor
-                    }
+                    self.competitionLabel.layer.backgroundColor = UIColor.superLightGray.cgColor
                 }
                 self.colorScores()
             }
@@ -209,26 +173,13 @@ class FixtureTableViewCell: UITableViewCell {
         
         if homeScore > awayScore {
             homeScoreLabel.textColor = .red
-            if self.traitCollection.userInterfaceStyle == .dark {
-                awayScoreLabel.textColor = .white
-            } else {
-                awayScoreLabel.textColor = .black
-            }
+            awayScoreLabel.textColor = .black
         } else if homeScore < awayScore {
             awayScoreLabel.textColor = .red
-            if self.traitCollection.userInterfaceStyle == .dark {
-                homeScoreLabel.textColor = .white
-            } else {
-                homeScoreLabel.textColor = .black
-            }
+            homeScoreLabel.textColor = .black
         } else {
-            if self.traitCollection.userInterfaceStyle == .dark {
-                homeScoreLabel.textColor = .white
-                awayScoreLabel.textColor = .white
-            } else {
-                homeScoreLabel.textColor = .black
-                awayScoreLabel.textColor = .black
-            }
+            homeScoreLabel.textColor = .black
+            awayScoreLabel.textColor = .black
         }
     }
 }

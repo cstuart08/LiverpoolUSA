@@ -10,7 +10,11 @@ import UIKit
 
 class StandingsController {
     
-    static func fetchStandings(completion: @escaping ([TeamStanding]) -> Void) {
+    static let shared = StandingsController()
+    
+    var standings: [TeamStanding] = []
+    
+    func fetchStandings(completion: @escaping ([TeamStanding]) -> Void) {
         
         guard let baseURL = URL(string: "https://livescore-api.com/api-client/leagues/table.json?") else { completion([]); return }
         
@@ -18,10 +22,11 @@ class StandingsController {
         let urlQueryItemkey = URLQueryItem(name: "key", value: "RVo5izZrngSvfH47")
         let urlQueryItemSecret = URLQueryItem(name: "secret", value: "WK8tYZSGtLU2aPj1LH74h6vFnoaC6fK2")
         let urlQueryItemCompetitionID = URLQueryItem(name: "competition_id", value: "2")
-        let urlQueryItemSeason = URLQueryItem(name: "season", value: "4")
+        let urlQueryItemSeason = URLQueryItem(name: "season", value: "8")
         components?.queryItems = [urlQueryItemkey, urlQueryItemSecret, urlQueryItemCompetitionID, urlQueryItemSeason]
         
         guard let finalURL = components?.url else { completion([]); return }
+        print(finalURL)
         
         let request = URLRequest(url: finalURL)
         
@@ -43,6 +48,7 @@ class StandingsController {
                 let topLevelObject = try decoder.decode(TopLevelObject.self, from: data)
                 let standings = topLevelObject.data.table
                 print("Success gettings standings.")
+                self.standings = standings
                 completion(standings)
             } catch {
                 print("Error getting standings. \(#function) - \(error) - \(error.localizedDescription)")

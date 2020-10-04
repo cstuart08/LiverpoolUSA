@@ -29,15 +29,11 @@ class CreateEventViewController: UIViewController {
         tap.addTarget(self, action: #selector(tapResign))
         view.addGestureRecognizer(tap)
         descriptionTextView.text = "Click 'Add A Description' to add a description of your event."
-        if self.traitCollection.userInterfaceStyle == .dark {
-            addADescriptionButton.backgroundColor = .black
-            pickDateButton.backgroundColor = .black
-            pickLocationButton.backgroundColor = .black
-        } else {
-            addADescriptionButton.backgroundColor = .white
-            pickDateButton.backgroundColor = .white
-            pickLocationButton.backgroundColor = .white
-        }
+        addADescriptionButton.backgroundColor = .liverpoolWhite
+        pickDateButton.backgroundColor = .liverpoolWhite
+        pickLocationButton.backgroundColor = .liverpoolWhite
+        titleTextField.attributedPlaceholder = NSAttributedString(string: "Enter event title here... (ex. Liverpool Fans Unite!)", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        matchTextField.attributedPlaceholder = NSAttributedString(string: "Enter match here... (ex. Liverpool vs Chelsea)", attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         UserBlacklistController.shared.checkIfBlacklistExists { (success) in
             if success {
                 guard let deviceID = UIDevice.current.identifierForVendor?.uuidString else { return }

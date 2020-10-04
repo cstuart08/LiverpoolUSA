@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E7CA5AF25297185006A0E91 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7CA5AE25297185006A0E91 /* LaunchScreenViewController.swift */; };
+		7E7CA5B22529724A006A0E91 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E7CA5B12529724A006A0E91 /* SplashScreen.storyboard */; };
 		D4166437233A78C200598F82 /* EventDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4166436233A78C200598F82 /* EventDescriptionViewController.swift */; };
 		D416643B233AC49D00598F82 /* UserBlacklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416643A233AC49D00598F82 /* UserBlacklist.swift */; };
 		D416643D233AC8D400598F82 /* UserBlacklistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416643C233AC8D400598F82 /* UserBlacklistController.swift */; };
@@ -51,6 +53,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E7CA5AE25297185006A0E91 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		7E7CA5B12529724A006A0E91 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 		D4166436233A78C200598F82 /* EventDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDescriptionViewController.swift; sourceTree = "<group>"; };
 		D416643A233AC49D00598F82 /* UserBlacklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBlacklist.swift; sourceTree = "<group>"; };
 		D416643C233AC8D400598F82 /* UserBlacklistController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBlacklistController.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 				D44D80EE2336B59900BD90AE /* PlacesSearchViewController.swift */,
 				D4166436233A78C200598F82 /* EventDescriptionViewController.swift */,
 				D4E1D9F823463BAD00F1CFA5 /* NoNetworkViewController.swift */,
+				7E7CA5AE25297185006A0E91 /* LaunchScreenViewController.swift */,
 			);
 			path = "Assistant View Controllers";
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				D4B8BDAC232BD1D3006FB110 /* Main.storyboard */,
+				7E7CA5B12529724A006A0E91 /* SplashScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -421,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4B8BDB3232BD1D4006FB110 /* LaunchScreen.storyboard in Resources */,
+				7E7CA5B22529724A006A0E91 /* SplashScreen.storyboard in Resources */,
 				D4FDF661233D5FA40054BB10 /* APIKeys.plist in Resources */,
 				D488081023326FE1003C22A9 /* Colors.xcassets in Resources */,
 				D4B8BDB0232BD1D4006FB110 /* Assets.xcassets in Resources */,
@@ -469,6 +476,7 @@
 				D4D56FE723343F0500CA2117 /* PlaceManager.swift in Sources */,
 				D4E1D9F923463BAD00F1CFA5 /* NoNetworkViewController.swift in Sources */,
 				D416643B233AC49D00598F82 /* UserBlacklist.swift in Sources */,
+				7E7CA5AF25297185006A0E91 /* LaunchScreenViewController.swift in Sources */,
 				D4DC6D0423342AB600A72669 /* SearchableRecord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -619,12 +627,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KMTDCPCY5V;
 				INFOPLIST_FILE = "$(SRCROOT)/LiverpoolUSA/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CameronStuart.LiverpoolUSA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -640,12 +648,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KMTDCPCY5V;
 				INFOPLIST_FILE = "$(SRCROOT)/LiverpoolUSA/Resources/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CameronStuart.LiverpoolUSA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -41,11 +41,7 @@ class EventDetailViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         eventLocationAdressButton.contentHorizontalAlignment = .left
-        if self.traitCollection.userInterfaceStyle == .dark {
-            self.view.backgroundColor = .black
-        } else {
-            self.view.backgroundColor = .white
-        }
+        self.view.backgroundColor = .liverpoolWhite
         screenWidth = Int(self.view.frame.size.width)
         checkAttendingStatus()
         updateViews()

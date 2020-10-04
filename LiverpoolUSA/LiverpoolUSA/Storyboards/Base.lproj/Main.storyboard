@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QCe-H5-pDL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QCe-H5-pDL">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -104,7 +105,7 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" estimatedRowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yZQ-ev-41d" userLabel="Standings Header View">
                                 <rect key="frame" x="0.0" y="82" width="414" height="605"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="liverpoolRed"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -124,7 +125,7 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(1)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4B-AQ-Ig9">
                                                                     <rect key="frame" x="0.0" y="0.0" width="17.666666666666668" height="35"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" name="superDarkGray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ff4-4A-VVn">
@@ -136,7 +137,7 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="(Crystal Palace)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vdb-iq-Nj8">
                                                                     <rect key="frame" x="60.666666666666671" y="0.0" width="138.33333333333331" height="35"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" name="superDarkGray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -151,43 +152,43 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Pl)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="brd-bJ-bQF">
                                                                     <rect key="frame" x="0.0" y="0.0" width="21.333333333333332" height="35"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" name="superDarkGray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(W)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="13J-BJ-X8Y">
-                                                                    <rect key="frame" x="27" y="0.0" width="22.333333333333329" height="35"/>
+                                                                    <rect key="frame" x="27.333333333333343" y="0.0" width="22.333333333333329" height="35"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" name="superDarkGray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(D)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yfm-hb-499">
                                                                     <rect key="frame" x="56.333333333333321" y="0.0" width="19.333333333333336" height="35"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" name="superDarkGray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(L)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Qy3-Lf-4Cf">
                                                                     <rect key="frame" x="85" y="0.0" width="17.333333333333329" height="35"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" name="superDarkGray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(+/-)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5Hs-qj-ddE">
-                                                                    <rect key="frame" x="107" y="0.0" width="28.666666666666657" height="35"/>
+                                                                    <rect key="frame" x="107.66666666666669" y="0.0" width="28" height="35"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" name="superDarkGray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(GD)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="W4s-9N-ZlV">
                                                                     <rect key="frame" x="135.66666666666669" y="0.0" width="29" height="35"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" name="superDarkGray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="(PTS)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hrc-ma-blw">
                                                                     <rect key="frame" x="164.66666666666669" y="0.0" width="34.333333333333343" height="35"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" name="superDarkGray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -237,7 +238,8 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eN0-GC-XbW"/>
+                        <color key="backgroundColor" name="liverpoolRed"/>
                         <color key="tintColor" name="liverpoolRed"/>
                         <constraints>
                             <constraint firstItem="yZQ-ev-41d" firstAttribute="trailing" secondItem="eN0-GC-XbW" secondAttribute="trailing" id="6BS-VU-WaX"/>
@@ -250,14 +252,9 @@
                             <constraint firstItem="GLd-06-hBb" firstAttribute="leading" secondItem="eN0-GC-XbW" secondAttribute="leading" id="jtL-fl-Fyh"/>
                             <constraint firstItem="GLd-06-hBb" firstAttribute="top" secondItem="eN0-GC-XbW" secondAttribute="top" id="sc6-Tr-gMp"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="eN0-GC-XbW"/>
                     </view>
                     <navigationItem key="navigationItem" title="Standings" id="gw0-6C-UY9">
-                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="sL4-OE-v7h">
-                            <connections>
-                                <action selector="refreshButtonTapped:" destination="aE8-ms-qg4" id="sbv-Hf-8V9"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="sL4-OE-v7h"/>
                         <barButtonItem key="rightBarButtonItem" title="Help?" id="tI0-Sj-mf7">
                             <connections>
                                 <action selector="privacyPolicyButtonTapped:" destination="aE8-ms-qg4" id="OH4-Tl-gAa"/>
@@ -266,7 +263,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="headerView" destination="GLd-06-hBb" id="MVn-X3-oFh"/>
-                        <outlet property="refreshButton" destination="sL4-OE-v7h" id="Kca-G3-PS1"/>
                         <outlet property="standingsTableView" destination="yZQ-ev-41d" id="oAc-Nb-OFc"/>
                     </connections>
                 </viewController>
@@ -284,7 +280,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="155" estimatedRowHeight="155" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fTg-BD-9i5">
                                 <rect key="frame" x="0.0" y="44" width="414" height="643"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="liverpoolWhite"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="fixtureCell" rowHeight="155" id="J7n-ZH-66b" customClass="FixtureTableViewCell" customModule="LiverpoolUSA" customModuleProvider="target">
@@ -311,7 +307,7 @@
                                                                 <constraint firstAttribute="width" constant="35" id="M6v-C8-g3c"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" name="superDarkGray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -322,7 +318,7 @@
                                                         <constraint firstAttribute="height" constant="60" id="WkF-eU-8aJ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="19"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" name="superDarkGray"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="3dY-CY-kOL">
@@ -334,13 +330,13 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="(date)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5i-Yo-dso">
                                                                     <rect key="frame" x="0.0" y="0.0" width="124" height="31"/>
                                                                     <fontDescription key="fontDescription" name="PingFangHK-Light" family="PingFang HK" pointSize="15"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" name="superDarkGray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(time)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kA4-rZ-8xx">
                                                                     <rect key="frame" x="0.0" y="31" width="124" height="31"/>
                                                                     <fontDescription key="fontDescription" name="PingFangHK-Light" family="PingFang HK" pointSize="15"/>
-                                                                    <nil key="textColor"/>
+                                                                    <color key="textColor" name="superDarkGray"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -348,7 +344,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(competition)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6p-gT-Abd">
                                                             <rect key="frame" x="0.0" y="83" width="124" height="17"/>
                                                             <fontDescription key="fontDescription" name="PingFangHK-Light" family="PingFang HK" pointSize="12"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" name="superDarkGray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -362,7 +358,7 @@
                                                         <constraint firstAttribute="height" constant="60" id="z55-1j-xJB"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="19"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" name="superDarkGray"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="s2Z-V4-5JE">
@@ -374,6 +370,7 @@
                                                                 <constraint firstAttribute="width" constant="35" id="kfu-HH-IpF"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                                            <color key="textColor" name="superDarkGray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6TP-R5-1Mh">
@@ -403,6 +400,7 @@
                                                 <constraint firstItem="BNg-86-g36" firstAttribute="leading" secondItem="Wv4-cv-hec" secondAttribute="leading" constant="4.3333333333333286" id="v9Z-X6-Yd7"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="liverpoolWhite"/>
                                         <connections>
                                             <outlet property="awayScoreLabel" destination="SMv-N1-fmW" id="2Ox-Bd-dP0"/>
                                             <outlet property="awayTeamLabel" destination="D1h-Xr-B8c" id="ULq-QP-lRh"/>
@@ -418,21 +416,17 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="DnX-4c-tcK"/>
+                        <color key="backgroundColor" name="liverpoolRed"/>
                         <constraints>
                             <constraint firstItem="DnX-4c-tcK" firstAttribute="trailing" secondItem="fTg-BD-9i5" secondAttribute="trailing" id="5LA-VI-glS"/>
                             <constraint firstItem="DnX-4c-tcK" firstAttribute="bottom" secondItem="fTg-BD-9i5" secondAttribute="bottom" id="N5m-4i-HBD"/>
                             <constraint firstItem="fTg-BD-9i5" firstAttribute="top" secondItem="DnX-4c-tcK" secondAttribute="top" id="fC6-SL-bBc"/>
                             <constraint firstItem="fTg-BD-9i5" firstAttribute="leading" secondItem="DnX-4c-tcK" secondAttribute="leading" id="iaJ-mj-mPR"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="DnX-4c-tcK"/>
                     </view>
                     <navigationItem key="navigationItem" title="Fixtures" id="SUw-sa-gWR">
-                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="Cqu-cY-lvK">
-                            <connections>
-                                <action selector="refreshButtonTapped:" destination="ROW-kU-gFE" id="40h-Hs-ZN3"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="Cqu-cY-lvK"/>
                     </navigationItem>
                     <connections>
                         <outlet property="fixturesTableView" destination="fTg-BD-9i5" id="rui-sY-qsX"/>
@@ -452,7 +446,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hOy-ZB-ozH">
                                 <rect key="frame" x="0.0" y="44" width="414" height="643"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="liverpoolWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="eventCell" rowHeight="120" id="s58-qV-Ycp" customClass="EventsTableViewCell" customModule="LiverpoolUSA" customModuleProvider="target">
@@ -512,6 +506,7 @@
                                                 <constraint firstItem="LIh-5J-dPD" firstAttribute="leading" secondItem="dmL-Cl-8XV" secondAttribute="trailing" priority="750" constant="8" id="yRv-fD-Guu"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="liverpoolWhite"/>
                                         <connections>
                                             <outlet property="cityStateLabel" destination="2hx-4V-s72" id="EFY-7U-R3m"/>
                                             <outlet property="dateTimeLabel" destination="F7w-8q-p4k" id="v81-tU-Z4r"/>
@@ -524,14 +519,14 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="TYW-Yi-PfY"/>
+                        <color key="backgroundColor" name="liverpoolWhite"/>
                         <constraints>
                             <constraint firstItem="TYW-Yi-PfY" firstAttribute="bottom" secondItem="hOy-ZB-ozH" secondAttribute="bottom" id="5Vw-I1-JY4"/>
                             <constraint firstItem="hOy-ZB-ozH" firstAttribute="width" secondItem="qBg-JN-KpH" secondAttribute="width" id="CiL-Yg-9eq"/>
                             <constraint firstItem="hOy-ZB-ozH" firstAttribute="centerX" secondItem="TYW-Yi-PfY" secondAttribute="centerX" id="EEH-0c-Y1K"/>
                             <constraint firstItem="hOy-ZB-ozH" firstAttribute="top" secondItem="TYW-Yi-PfY" secondAttribute="top" id="Tzq-8P-qTX"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="TYW-Yi-PfY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Events" id="YPT-iU-t0L">
                         <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="g7t-U3-dcW">
@@ -577,19 +572,23 @@
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter event title here... (ex. Liverpool Fans Unite!)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vQW-zM-7Fz">
                                 <rect key="frame" x="20.666666666666657" y="140.66666666666666" width="372.66666666666674" height="38.666666666666657"/>
+                                <color key="backgroundColor" name="liverpoolWhite"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" name="superDarkGray"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter match here... (ex. Liverpool vs Chelsea)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hf0-Jk-J7C">
                                 <rect key="frame" x="20.666666666666657" y="203.33333333333334" width="372.66666666666674" height="38.333333333333343"/>
+                                <color key="backgroundColor" name="liverpoolWhite"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" name="superDarkGray"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqa-TH-F0W">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqa-TH-F0W">
                                 <rect key="frame" x="20.666666666666657" y="328.33333333333331" width="372.66666666666674" height="38.666666666666686"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="liverpoolWhite"/>
                                 <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="18"/>
                                 <state key="normal" title="Search for a location">
                                     <color key="titleColor" name="liverpoolRed"/>
@@ -598,9 +597,9 @@
                                     <action selector="selectLocationButtonTapped:" destination="SB7-eY-w6Y" eventType="touchUpInside" id="ej3-pv-eL9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eS2-NO-fzl">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eS2-NO-fzl">
                                 <rect key="frame" x="20.666666666666657" y="265.66666666666669" width="372.66666666666674" height="38.666666666666686"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="liverpoolWhite"/>
                                 <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="18"/>
                                 <state key="normal" title="Pick a date">
                                     <color key="titleColor" name="liverpoolRed"/>
@@ -611,15 +610,15 @@
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b1R-6p-0GD">
                                 <rect key="frame" x="20.666666666666657" y="453.66666666666669" width="372.66666666666674" height="115.66666666666669"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="liverpoolWhite"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="PingFangHK-Light" family="PingFang HK" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYD-nw-M0j">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYD-nw-M0j">
                                 <rect key="frame" x="20.666666666666657" y="391" width="372.66666666666674" height="38.666666666666686"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="liverpoolWhite"/>
                                 <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="18"/>
                                 <state key="normal" title="Add A Description">
                                     <color key="titleColor" name="liverpoolRed"/>
@@ -630,6 +629,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="XUq-0V-S58"/>
                         <color key="backgroundColor" name="liverpoolRed"/>
                         <constraints>
                             <constraint firstItem="eS2-NO-fzl" firstAttribute="centerX" secondItem="XUq-0V-S58" secondAttribute="centerX" id="0IN-ZZ-xZX"/>
@@ -663,7 +663,6 @@
                             <constraint firstItem="b1R-6p-0GD" firstAttribute="centerX" secondItem="XUq-0V-S58" secondAttribute="centerX" id="tJK-C4-wP5"/>
                             <constraint firstItem="vQW-zM-7Fz" firstAttribute="height" secondItem="XUq-0V-S58" secondAttribute="height" multiplier="0.06" id="uJE-1Q-8XR"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="XUq-0V-S58"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create An Event" id="9qM-TI-sFi">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="AJ4-Hf-BDJ">
@@ -695,10 +694,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" datePickerMode="dateAndTime" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="dIa-kg-Dpl">
-                                <rect key="frame" x="0.0" y="218" width="414" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="Lzb-PI-iy3"/>
-                                </constraints>
+                                <rect key="frame" x="74.666666666666657" y="331.33333333333331" width="264.66666666666674" height="73.333333333333314"/>
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
                                     <!--1970-01-01 11:00:00 +0000-->
                                 </date>
@@ -706,29 +702,30 @@
                                     <action selector="datePickerChanged:" destination="aV4-aJ-S1U" eventType="valueChanged" id="URv-eB-pML"/>
                                 </connections>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEE-cq-3BR">
-                                <rect key="frame" x="82.666666666666671" y="558" width="248.66666666666663" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEE-cq-3BR">
+                                <rect key="frame" x="215.00000000000003" y="444.66666666666669" width="124.33333333333334" height="40"/>
                                 <color key="backgroundColor" name="liverpoolRed"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="FdG-a7-yMW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="24"/>
                                 <state key="normal" title="Done">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" name="liverpoolWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="doneButtonTapped:" destination="aV4-aJ-S1U" eventType="touchUpInside" id="etD-hI-TyE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick A Date:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v0x-qj-Z3k">
-                                <rect key="frame" x="82.666666666666671" y="138" width="248.66666666666663" height="40"/>
+                                <rect key="frame" x="74.666666666666657" y="251.33333333333337" width="264.66666666666674" height="40"/>
                                 <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" name="liverpoolWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkX-Mw-KDq">
-                                <rect key="frame" x="345" y="18" width="57" height="38"/>
-                                <fontDescription key="fontDescription" name="PingFangHK-Light" family="PingFang HK" pointSize="18"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkX-Mw-KDq">
+                                <rect key="frame" x="74.666666666666686" y="444.66666666666669" width="124.33333333333331" height="40"/>
+                                <color key="backgroundColor" name="liverpoolWhite"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="24"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" name="liverpoolRed"/>
                                 </state>
@@ -737,22 +734,27 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="zbj-pV-caB"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="dIa-kg-Dpl" firstAttribute="leading" secondItem="EkX-Mw-KDq" secondAttribute="leading" id="7Xe-OV-Bfh"/>
                             <constraint firstItem="v0x-qj-Z3k" firstAttribute="height" secondItem="dEE-cq-3BR" secondAttribute="height" id="AN4-9W-5eq"/>
                             <constraint firstItem="v0x-qj-Z3k" firstAttribute="centerX" secondItem="zbj-pV-caB" secondAttribute="centerX" id="Ahr-Y8-5Fm"/>
-                            <constraint firstItem="v0x-qj-Z3k" firstAttribute="width" secondItem="dEE-cq-3BR" secondAttribute="width" id="Clx-oX-3ps"/>
-                            <constraint firstItem="dEE-cq-3BR" firstAttribute="width" secondItem="dIa-kg-Dpl" secondAttribute="width" multiplier="0.6" id="JQ1-TI-uTd"/>
+                            <constraint firstItem="v0x-qj-Z3k" firstAttribute="leading" secondItem="dIa-kg-Dpl" secondAttribute="leading" id="HhG-Qb-Xeh"/>
+                            <constraint firstItem="EkX-Mw-KDq" firstAttribute="width" secondItem="dEE-cq-3BR" secondAttribute="width" id="Nz7-t3-EYY"/>
+                            <constraint firstItem="dIa-kg-Dpl" firstAttribute="trailing" secondItem="dEE-cq-3BR" secondAttribute="trailing" id="P3C-gG-7Rz"/>
                             <constraint firstItem="dIa-kg-Dpl" firstAttribute="top" secondItem="v0x-qj-Z3k" secondAttribute="bottom" constant="40" id="PH9-en-QWe"/>
-                            <constraint firstItem="dEE-cq-3BR" firstAttribute="centerX" secondItem="zbj-pV-caB" secondAttribute="centerX" id="Sy7-hW-Udz"/>
+                            <constraint firstItem="dEE-cq-3BR" firstAttribute="leading" secondItem="zbj-pV-caB" secondAttribute="centerX" constant="8" id="Sy7-hW-Udz"/>
                             <constraint firstItem="dEE-cq-3BR" firstAttribute="top" secondItem="dIa-kg-Dpl" secondAttribute="bottom" constant="40" id="YMA-xf-L7h"/>
-                            <constraint firstItem="dIa-kg-Dpl" firstAttribute="width" secondItem="1dH-Wp-Br3" secondAttribute="width" id="egn-lg-qbf"/>
-                            <constraint firstItem="zbj-pV-caB" firstAttribute="trailing" secondItem="EkX-Mw-KDq" secondAttribute="trailing" constant="12" id="tOC-Qy-F3s"/>
-                            <constraint firstItem="EkX-Mw-KDq" firstAttribute="top" secondItem="zbj-pV-caB" secondAttribute="top" constant="18" id="uHV-qE-cVW"/>
+                            <constraint firstItem="EkX-Mw-KDq" firstAttribute="height" secondItem="dEE-cq-3BR" secondAttribute="height" id="dkF-GI-7MT"/>
+                            <constraint firstItem="v0x-qj-Z3k" firstAttribute="trailing" secondItem="dIa-kg-Dpl" secondAttribute="trailing" id="ejc-rL-bF3"/>
+                            <constraint firstItem="dIa-kg-Dpl" firstAttribute="height" secondItem="1dH-Wp-Br3" secondAttribute="height" multiplier="0.1" id="kfI-AU-WUz"/>
+                            <constraint firstItem="dEE-cq-3BR" firstAttribute="width" secondItem="1dH-Wp-Br3" secondAttribute="width" multiplier="0.3" id="kkk-2M-ewh"/>
+                            <constraint firstItem="EkX-Mw-KDq" firstAttribute="trailing" secondItem="zbj-pV-caB" secondAttribute="centerX" constant="-8" id="pq6-Jo-aeL"/>
                             <constraint firstItem="dIa-kg-Dpl" firstAttribute="centerY" secondItem="zbj-pV-caB" secondAttribute="centerY" id="uR9-hd-dLK"/>
+                            <constraint firstItem="EkX-Mw-KDq" firstAttribute="centerY" secondItem="dEE-cq-3BR" secondAttribute="centerY" id="xMh-C5-fk0"/>
                             <constraint firstItem="dIa-kg-Dpl" firstAttribute="centerX" secondItem="zbj-pV-caB" secondAttribute="centerX" id="zon-hQ-vTb"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="zbj-pV-caB"/>
                     </view>
                     <connections>
                         <outlet property="datePicker" destination="dIa-kg-Dpl" id="84C-Kx-f7D"/>
@@ -777,7 +779,7 @@
                                 <color key="separatorColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="sectionIndexTrackingBackgroundColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" systemColor="systemRedColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="placesSearchResultsCell" textLabel="NTF-p3-eFy" detailTextLabel="P9e-ic-463" style="IBUITableViewCellStyleValue1" id="8vx-48-mb6">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
@@ -787,14 +789,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NTF-p3-eFy">
-                                                    <rect key="frame" x="20.000000000000004" y="11.999999999999998" width="33.333333333333336" height="20.333333333333332"/>
+                                                    <rect key="frame" x="20" y="11.999999999999998" width="33" height="20.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="P9e-ic-463">
-                                                    <rect key="frame" x="350" y="11.999999999999998" width="44" height="20.333333333333332"/>
+                                                    <rect key="frame" x="350.33333333333331" y="11.999999999999998" width="43.666666666666664" height="20.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -817,7 +819,7 @@
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weJ-8U-NmQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weJ-8U-NmQ">
                                 <rect key="frame" x="341" y="16" width="57" height="38"/>
                                 <fontDescription key="fontDescription" name="PingFangHK-Light" family="PingFang HK" pointSize="18"/>
                                 <state key="normal" title="Cancel">
@@ -828,6 +830,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="bcU-kS-P5F"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Mho-Zv-umP" firstAttribute="width" secondItem="tfa-w8-11b" secondAttribute="width" id="0eH-HF-L4F"/>
@@ -840,7 +843,6 @@
                             <constraint firstItem="J9j-DV-RQY" firstAttribute="top" secondItem="bcU-kS-P5F" secondAttribute="top" constant="100" id="gBv-Al-ywE"/>
                             <constraint firstItem="J9j-DV-RQY" firstAttribute="width" secondItem="tfa-w8-11b" secondAttribute="width" id="gZP-wf-TFI"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="bcU-kS-P5F"/>
                     </view>
                     <connections>
                         <outlet property="placesSearchBar" destination="J9j-DV-RQY" id="JTi-qB-5oI"/>
@@ -939,11 +941,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBk-HY-0lp">
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBk-HY-0lp">
                                                 <rect key="frame" x="0.0" y="65.666666666666657" width="393.33333333333331" height="31"/>
                                                 <fontDescription key="fontDescription" name="PingFangHK-Light" family="PingFang HK" pointSize="16"/>
                                                 <state key="normal" title="(location address)">
-                                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" systemColor="systemBlueColor"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="locationAddressButtonTapped:" destination="YeE-cV-F2g" eventType="touchUpInside" id="hNW-mz-bMJ"/>
@@ -962,15 +964,15 @@
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iw-bv-9R4">
                                         <rect key="frame" x="0.0" y="316.33333333333337" width="393.33333333333331" height="241"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="s8e-VB-lNz">
                                         <rect key="frame" x="0.0" y="567.33333333333326" width="393.33333333333331" height="63"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLo-wC-z3f">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLo-wC-z3f">
                                                 <rect key="frame" x="0.0" y="0.0" width="192.66666666666666" height="63"/>
                                                 <color key="backgroundColor" name="liverpoolRed"/>
                                                 <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="18"/>
@@ -1005,6 +1007,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="IZz-Ve-oWp"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="49L-HL-Qf3" firstAttribute="centerY" secondItem="IZz-Ve-oWp" secondAttribute="centerY" id="94L-K6-X2Q"/>
@@ -1012,7 +1015,6 @@
                             <constraint firstItem="49L-HL-Qf3" firstAttribute="centerX" secondItem="IZz-Ve-oWp" secondAttribute="centerX" id="Uvh-ww-ADH"/>
                             <constraint firstItem="49L-HL-Qf3" firstAttribute="width" secondItem="IZz-Ve-oWp" secondAttribute="width" multiplier="0.95" id="ZER-Ex-yZ7"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="IZz-Ve-oWp"/>
                     </view>
                     <navigationItem key="navigationItem" title="Event" id="CDs-cj-x69">
                         <barButtonItem key="rightBarButtonItem" title="Report" id="VOX-Vy-b1l">
@@ -1118,6 +1120,7 @@
                                 <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </progressView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pzf-PZ-yCb"/>
                         <color key="backgroundColor" name="liverpoolRed"/>
                         <constraints>
                             <constraint firstItem="0ut-As-hcR" firstAttribute="width" secondItem="497-av-AGw" secondAttribute="width" id="1OL-hI-uSv"/>
@@ -1130,7 +1133,6 @@
                             <constraint firstItem="dhn-Eq-jIR" firstAttribute="centerY" secondItem="Pzf-PZ-yCb" secondAttribute="centerY" id="oDC-6n-l2i"/>
                             <constraint firstItem="h5k-vU-kEN" firstAttribute="top" secondItem="dhn-Eq-jIR" secondAttribute="bottom" constant="16" id="xn1-Ek-5tx"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Pzf-PZ-yCb"/>
                     </view>
                     <connections>
                         <outlet property="liverpoolLabel" destination="0ut-As-hcR" id="cgm-fr-Bn4"/>
@@ -1158,7 +1160,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4d-sb-9Vs">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4d-sb-9Vs">
                                         <rect key="frame" x="0.0" y="115.33333333333331" width="269.33333333333331" height="36"/>
                                         <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="17"/>
                                         <state key="normal" title="OKAY">
@@ -1181,13 +1183,13 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="hVr-Iz-89A"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="H27-oh-mBq" firstAttribute="width" secondItem="hVr-Iz-89A" secondAttribute="width" multiplier="0.65" id="eXr-zq-1hr"/>
                             <constraint firstItem="H27-oh-mBq" firstAttribute="centerX" secondItem="hVr-Iz-89A" secondAttribute="centerX" id="hTw-If-6wm"/>
                             <constraint firstItem="H27-oh-mBq" firstAttribute="centerY" secondItem="hVr-Iz-89A" secondAttribute="centerY" id="yld-s0-nBL"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="hVr-Iz-89A"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szI-k0-Azg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1243,7 +1245,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUq-0U-zBl">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUq-0U-zBl">
                                 <rect key="frame" x="76.666666666666657" y="380" width="260.66666666666674" height="40"/>
                                 <color key="backgroundColor" name="liverpoolRed"/>
                                 <constraints>
@@ -1251,13 +1253,13 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="24"/>
                                 <state key="normal" title="Done">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" name="liverpoolWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="doneButtonTapped:" destination="afg-0v-X3K" eventType="touchUpInside" id="dHe-3f-UDn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reg-QG-WC5">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reg-QG-WC5">
                                 <rect key="frame" x="345" y="18" width="57" height="38"/>
                                 <fontDescription key="fontDescription" name="PingFangHK-Light" family="PingFang HK" pointSize="18"/>
                                 <state key="normal" title="Cancel">
@@ -1269,17 +1271,18 @@
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Dkv-80-oBC">
                                 <rect key="frame" x="20.666666666666657" y="220.66666666666663" width="372.66666666666674" height="147.33333333333337"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" name="liverpoolWhite"/>
                                 <fontDescription key="fontDescription" name="PingFangHK-Light" family="PingFang HK" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add A Description:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eft-fD-bK4">
                                 <rect key="frame" x="76.666666666666657" y="156.66666666666666" width="260.66666666666674" height="34"/>
                                 <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" name="liverpoolWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Ps-wP-Dre"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Dkv-80-oBC" firstAttribute="centerX" secondItem="6Ps-wP-Dre" secondAttribute="centerX" id="4aL-70-kMY"/>
@@ -1295,7 +1298,6 @@
                             <constraint firstItem="Eft-fD-bK4" firstAttribute="width" secondItem="Dkv-80-oBC" secondAttribute="width" multiplier="0.7" id="r6b-F7-DGW"/>
                             <constraint firstItem="Dkv-80-oBC" firstAttribute="top" secondItem="Eft-fD-bK4" secondAttribute="bottom" constant="30" id="ryK-w1-yul"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Ps-wP-Dre"/>
                     </view>
                     <connections>
                         <outlet property="descriptionTextView" destination="Dkv-80-oBC" id="2Hm-3G-Qsl"/>
@@ -1306,6 +1308,7 @@
             <point key="canvasLocation" x="4824.6376811594209" y="1964.6739130434785"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="fixturesIcon" width="20" height="20"/>
         <image name="socialIcon" width="22" height="17"/>
@@ -1316,6 +1319,23 @@
         <namedColor name="liverpoolRed">
             <color red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="liverpoolWhite">
+            <color red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="superDarkGray">
+            <color red="0.1803921568627451" green="0.20000000000000001" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
-    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

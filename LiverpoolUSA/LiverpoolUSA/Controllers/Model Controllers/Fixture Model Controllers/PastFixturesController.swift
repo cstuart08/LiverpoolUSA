@@ -18,7 +18,7 @@ class PastFixturesController {
         let urlQueryItemkey = URLQueryItem(name: "key", value: APIKeyManager.retrieveAPIKey(name: "LiveScoreKey"))
         let urlQueryItemSecret = URLQueryItem(name: "secret", value: APIKeyManager.retrieveAPIKey(name: "LiveScoreSecret"))
         let urlQueryItemTeam = URLQueryItem(name: "team", value: "7")
-        let urlQueryItemFromDate = URLQueryItem(name: "from", value: "2019-08-01")
+        let urlQueryItemFromDate = URLQueryItem(name: "from", value: "2020-08-01")
         components?.queryItems = [urlQueryItemkey, urlQueryItemSecret, urlQueryItemTeam, urlQueryItemFromDate]
         
         guard let finalURL = components?.url else { completion([]); return }

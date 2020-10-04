@@ -21,7 +21,7 @@ class DatePickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         datePicker.setValue(UIColor.white, forKey: "textColor")
-        datePicker.setValue(false, forKey: "highlightsToday")
+//        datePicker.setValue(false, forKey: "highlightsToday")
         datePicker.tintColor = .white
         datePicker.minimumDate = Date()
     }
