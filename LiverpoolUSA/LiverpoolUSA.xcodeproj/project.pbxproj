@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7E7CA5AF25297185006A0E91 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7CA5AE25297185006A0E91 /* LaunchScreenViewController.swift */; };
 		7E7CA5B22529724A006A0E91 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E7CA5B12529724A006A0E91 /* SplashScreen.storyboard */; };
+		7E7CA5BF25298FAE006A0E91 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7CA5BE25298FAE006A0E91 /* LocationManager.swift */; };
 		D4166437233A78C200598F82 /* EventDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4166436233A78C200598F82 /* EventDescriptionViewController.swift */; };
 		D416643B233AC49D00598F82 /* UserBlacklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416643A233AC49D00598F82 /* UserBlacklist.swift */; };
 		D416643D233AC8D400598F82 /* UserBlacklistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D416643C233AC8D400598F82 /* UserBlacklistController.swift */; };
@@ -55,6 +56,7 @@
 /* Begin PBXFileReference section */
 		7E7CA5AE25297185006A0E91 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		7E7CA5B12529724A006A0E91 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
+		7E7CA5BE25298FAE006A0E91 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D4166436233A78C200598F82 /* EventDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDescriptionViewController.swift; sourceTree = "<group>"; };
 		D416643A233AC49D00598F82 /* UserBlacklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBlacklist.swift; sourceTree = "<group>"; };
 		D416643C233AC8D400598F82 /* UserBlacklistController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBlacklistController.swift; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 			children = (
 				D4D56FE623343F0500CA2117 /* PlaceManager.swift */,
 				D4DC6CCE2332C9EF00A72669 /* TeamLogoManager.swift */,
+				7E7CA5BE25298FAE006A0E91 /* LocationManager.swift */,
 			);
 			path = "Network Calls";
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				D416643B233AC49D00598F82 /* UserBlacklist.swift in Sources */,
 				7E7CA5AF25297185006A0E91 /* LaunchScreenViewController.swift in Sources */,
 				D4DC6D0423342AB600A72669 /* SearchableRecord.swift in Sources */,
+				7E7CA5BF25298FAE006A0E91 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,7 +636,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CameronStuart.LiverpoolUSA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -653,7 +657,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.CameronStuart.LiverpoolUSA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

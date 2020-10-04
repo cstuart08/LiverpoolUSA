@@ -40,13 +40,7 @@ class PlacesSearchViewController: UIViewController, UISearchBarDelegate {
     
     // MARK: - Properties
     var placeDelegate: PlaceSelectionDelegate!
-    var searchResults: [Place] = [] {
-        didSet {
-            DispatchQueue.main.async {
-                self.searchResultsTableView.reloadData()
-            }
-        }
-    }
+    var searchResults: [Place] = []
     var isSearching: Bool = false
     
     // MARK: - Methods
@@ -54,8 +48,9 @@ class PlacesSearchViewController: UIViewController, UISearchBarDelegate {
         guard let searchTerm = placesSearchBar.text else { return }
         PlaceManager.fetchPlaces(searchTerm: searchTerm) { (places) in
             DispatchQueue.main.async {
-                self.searchResultsTableView.isHidden = false
                 self.searchResults = places
+                self.searchResultsTableView.reloadData()
+                self.searchResultsTableView.isHidden = false
                 print(searchTerm)
             }
         }
