@@ -12,11 +12,19 @@ class EventsViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var eventsTableView: UITableView!
-    @IBOutlet weak var refreshButton: UIBarButtonItem!
+    
+    // MARK: - Properties
+    let button1: UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 60))
+    var refreshing = false
     
     // MARRK: - Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        button1.setTitle("", for: .normal)
+        button1.setImage(UIImage(systemName:    "arrow.clockwise"), for: .normal)
+        button1.addTarget(self, action: #selector(refreshButtonTapped), for: .touchUpInside)
+        let barItem1: UIBarButtonItem = UIBarButtonItem(customView: button1)
+        navigationItem.setLeftBarButton(barItem1, animated: true)
         eventsTableView.delegate = self
         eventsTableView.dataSource = self
         eventsTableView.tableFooterView = UIView()
@@ -45,19 +53,39 @@ class EventsViewController: UIViewController {
             }
         }
         NotificationCenter.default.addObserver(self, selector: #selector(reloadViews), name: EventController.shared.eventsWereUpdatedNotification, object: nil)
+        rotateBarButton()
         getAllEvetns()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        deselectCells()
+    }
+    
     // MARK: - Methods
+    
+    func deselectCells() {
+        guard let selectedItems = eventsTableView.indexPathsForSelectedRows else { return }
+        for indexPath in selectedItems {
+            eventsTableView.deselectRow(at: indexPath, animated: false)
+        }
+    }
+    
     func getAllEvetns() {
+        refreshing = true
         EventController.shared.fetchAllEvents { (events) in
-            print("attempting fetch of all events")
+            self.refreshing = false
             DispatchQueue.main.async {
                 print("Reloading events tableview data")
                 self.eventsTableView.reloadData()
                 self.eventsTableView.isHidden = false
             }
         }
+    }
+    
+    @objc func refreshButtonTapped() {
+        getAllEvetns()
+        rotateBarButton()
     }
     
     @objc func reloadViews() {
@@ -67,9 +95,18 @@ class EventsViewController: UIViewController {
         }
     }
     
-    // MARK: - Actions
-    @IBAction func refreshButtonTapped(_ sender: Any) {
-        getAllEvetns()
+    func rotateBarButton() {
+        UIView.animate(withDuration: 0.7) { () -> Void in
+          self.button1.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+        }
+
+        UIView.animate(withDuration: 0.7, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: { () -> Void in
+          self.button1.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 2.0)
+        }) { (_) in
+            if self.refreshing == true {
+                self.rotateBarButton()
+            }
+        }
     }
     
     // MARK: - Navigation

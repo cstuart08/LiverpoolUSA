@@ -469,25 +469,25 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dya-Vz-CoX">
                                                             <rect key="frame" x="0.0" y="0.0" width="278.33333333333331" height="25.333333333333332"/>
                                                             <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="18"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" name="superDarkGray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liverpool vs Uh?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SUx-B8-RUt">
                                                             <rect key="frame" x="0.0" y="28.333333333333336" width="110.33333333333333" height="25.333333333333336"/>
                                                             <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="14"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" name="superDarkGray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date, time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7w-8q-p4k">
                                                             <rect key="frame" x="0.0" y="56.666666666666664" width="67" height="25.333333333333336"/>
                                                             <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="14"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" name="superDarkGray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="city, state" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2hx-4V-s72">
                                                             <rect key="frame" x="0.0" y="85" width="278.33333333333331" height="25.333333333333329"/>
                                                             <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="14"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" name="superDarkGray"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -529,11 +529,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Events" id="YPT-iU-t0L">
-                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="g7t-U3-dcW">
-                            <connections>
-                                <action selector="refreshButtonTapped:" destination="3ww-oi-50a" id="I6I-5V-zlg"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="g7t-U3-dcW"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="JBv-nQ-r2a">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -543,7 +539,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="eventsTableView" destination="hOy-ZB-ozH" id="CQo-1D-NlX"/>
-                        <outlet property="refreshButton" destination="g7t-U3-dcW" id="Mhn-HL-o9p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0sz-6c-Uce" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -873,7 +868,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YeF-h3-ucx">
                                                         <rect key="frame" x="0.0" y="0.0" width="221" height="48.666666666666664"/>
                                                         <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="34"/>
-                                                        <nil key="textColor"/>
+                                                        <color key="textColor" name="superDarkGray"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="b3b-lT-ZYh">
@@ -882,13 +877,13 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="MATCH:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dOo-WM-zKf">
                                                                 <rect key="frame" x="0.0" y="0.0" width="221" height="24"/>
                                                                 <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="34"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" name="superDarkGray"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Match" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="EjQ-B5-C7l">
                                                                 <rect key="frame" x="0.0" y="24" width="221" height="24.333333333333329"/>
                                                                 <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="34"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" name="superDarkGray"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -899,13 +894,13 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="WHEN:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zqt-sd-rRb">
                                                                 <rect key="frame" x="0.0" y="0.0" width="221" height="24.333333333333332"/>
                                                                 <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="34"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" name="superDarkGray"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Date &amp; Time" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Dn4-wD-GRR">
                                                                 <rect key="frame" x="0.0" y="24.333333333333314" width="221" height="24"/>
                                                                 <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="34"/>
-                                                                <nil key="textColor"/>
+                                                                <color key="textColor" name="superDarkGray"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
@@ -932,13 +927,13 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="WHERE:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7R-fY-d7p">
                                                 <rect key="frame" x="0.0" y="0.0" width="393.33333333333331" height="24.333333333333332"/>
                                                 <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="15"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" name="superDarkGray"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Location Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwJ-K2-AzP">
                                                 <rect key="frame" x="0.0" y="29.333333333333343" width="393.33333333333331" height="31.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="15"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" name="superDarkGray"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBk-HY-0lp">
@@ -958,14 +953,15 @@
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DESCRIPTION:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bX3-BH-Rjz">
                                         <rect key="frame" x="0.0" y="282" width="393.33333333333331" height="24.333333333333314"/>
+                                        <color key="backgroundColor" name="liverpoolWhite"/>
                                         <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="15"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="superDarkGray"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6iw-bv-9R4">
                                         <rect key="frame" x="0.0" y="316.33333333333337" width="393.33333333333331" height="241"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <color key="textColor" systemColor="labelColor"/>
+                                        <color key="backgroundColor" name="liverpoolWhite"/>
+                                        <color key="textColor" name="superDarkGray"/>
                                         <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -991,7 +987,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Attending" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7g-6j-xVZ">
                                                 <rect key="frame" x="200.66666666666669" y="0.0" width="192.66666666666669" height="63"/>
                                                 <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="15"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" name="superDarkGray"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -1325,12 +1321,6 @@
         <namedColor name="superDarkGray">
             <color red="0.1803921568627451" green="0.20000000000000001" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

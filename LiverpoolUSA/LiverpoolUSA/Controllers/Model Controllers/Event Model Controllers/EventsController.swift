@@ -126,4 +126,20 @@ class EventController {
             return
         }
     }
+    
+    func deleteEvent(event: Event, completion: @escaping (Bool) -> Void) {
+        
+        publicDB.delete(withRecordID: event.recordID) { (recordID, error) in
+            if let error = error {
+                print(error)
+                print(error.localizedDescription)
+                return completion(false)
+            }
+            
+            guard let recordID = recordID else { return completion(false) }
+            
+            print("Successfully deleted event with recordID: \(recordID)")
+            completion(true)
+        }
+    }
 }
