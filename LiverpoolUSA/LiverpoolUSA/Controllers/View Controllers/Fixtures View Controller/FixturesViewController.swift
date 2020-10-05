@@ -79,9 +79,7 @@ class FixturesViewController: UIViewController {
                         self.fixturesTableView.isHidden = false
                         self.fixturesTableView.reloadData()
                         let indexPath = NSIndexPath(row: 0, section: 1)
-                        if self.apiCallCount == 0 {
-                            self.fixturesTableView.scrollToRow(at: (indexPath as IndexPath), at: .top, animated: false)
-                        }
+                        self.fixturesTableView.scrollToRow(at: (indexPath as IndexPath), at: .top, animated: true)
                         self.apiCallCount = self.apiCallCount + 1
                     }
                 }
